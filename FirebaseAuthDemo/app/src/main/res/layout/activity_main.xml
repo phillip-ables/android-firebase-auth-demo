@@ -20,7 +20,7 @@
         <EditText
             android:inputType="textEmailAddress"
             android:hint="Enter your email"
-            android:id="@+id/eidtTextEmail"
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"/>
@@ -28,7 +28,7 @@
         <EditText
             android:inputType="textPassword"
             android:hint="Enter your password"
-            android:id="@+id/eidtTextPassword"
+            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"/>
