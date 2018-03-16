@@ -28,4 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         textViewSignin = (TextView) findViewById(R.id.textViewSignin);
     }
+
+    @Override
+    public void onClick(View v) {
+        
+    }
 }
