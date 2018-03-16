@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "25429328148",
+    "firebase_url": "https://android-auth-1a561.firebaseio.com",
+    "project_id": "android-auth-1a561",
+    "storage_bucket": "android-auth-1a561.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25429328148:android:ade8c4712c3f0ff8",
+        "android_client_info": {
+          "package_name": "com.example.techtron.firebaseauthdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25429328148-jllcu2pt892m6dlqifsmtt496cbjd5u6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMKun7I0RnVUo3TpS6WVTeT9VkmTYk_88"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
