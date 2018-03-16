@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
 
         textViewSignin = (TextView) findViewById(R.id.textViewSignin);
+
+        buttonRegister.setOnClickListener(this);
+        textViewSignin.setOnClickListener(this);
     }
 
     @Override
