@@ -37,7 +37,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if(firebaseAuth.getCurrentUser() != null){
             //pofile activity here
-            
+            finish();
+            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
         }
 
         buttonSignIn = (Button) findViewById(R.id.buttonRegister);
@@ -75,7 +76,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                         if(task.isSuccessful()){
                             //start the profile activity
-
+                            finish();
+                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         }
                     }
                 });
