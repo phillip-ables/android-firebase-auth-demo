@@ -1,5 +1,6 @@
 package com.example.techtron.firebaseauthdemo;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText editTextPassword;
     private TextView textViewSignup;
 
+    private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         textViewSignup = (TextView) findViewById(R.id.textViewSignup);
+
+        progressDialog = new ProgressDialog(this);
 
         buttonSignIn.setOnClickListener(this);
         textViewSignup.setOnClickListener(this);
@@ -44,6 +49,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
+        progressDialog.setMessage("Registering Please Wait...");
+        progressDialog.show();
 
     }
 
