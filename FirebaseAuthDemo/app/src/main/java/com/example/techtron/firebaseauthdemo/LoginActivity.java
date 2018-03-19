@@ -1,5 +1,6 @@
 package com.example.techtron.firebaseauthdemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,5 +31,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        if(v == buttonSignIn){
+            userLogin();
+        }
+        if(v == textViewSignup){
+            finish();
+            startActivity(new Intent(this, MainActivity.class));
+        }
+
     }
 }
