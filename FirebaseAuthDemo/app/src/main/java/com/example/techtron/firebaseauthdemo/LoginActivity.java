@@ -3,10 +3,12 @@ package com.example.techtron.firebaseauthdemo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -32,6 +34,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void userLogin(){
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+
+        if(TextUtils.isEmpty(email)){
+            Toast.makeText(this, "Please enter email", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(password)){
+            Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
     }
 
     @Override
