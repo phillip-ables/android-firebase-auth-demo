@@ -29,6 +29,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         textViewSignup.setOnClickListener(this);
     }
 
+    private void userLogin(){
+        String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+    }
+
     @Override
     public void onClick(View v) {
         if(v == buttonSignIn){
