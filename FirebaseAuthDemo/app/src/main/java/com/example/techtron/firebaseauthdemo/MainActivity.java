@@ -1,6 +1,7 @@
 package com.example.techtron.firebaseauthdemo;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,6 +37,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        if(firebaseAuth.getCurrentUser() != null){
+            finish();
+            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+        }
 
         progressDialog = new ProgressDialog(this);
 
@@ -75,12 +81,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             //user is succesfully registered and login
-                            //start the profile activity here
-                            Toast.makeText(MainActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+                            finish();
+                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         }else{
-                            Toast.makeText(MainActivity.this, "Could not register... Please try again", Toast.LENGTH_SHORT).show();
-                            return;
+                            Toast.makeText(MainActivity.this, "Registration Error", Toast.LENGTH_SHORT).show();
                         }
+
+                        progressDialog.dismiss();
                     }
                 });
 
@@ -94,6 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(v == textViewSignin){
             //will open login activity
+            startActivity(new Intent(this, LoginActivity.class));
         }
     }
 }
